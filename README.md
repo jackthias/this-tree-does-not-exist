@@ -1,4 +1,4 @@
-# Final Project
+# Final Project from COMP251: Machine Learning
 ## This Tree Does Not Exist
 
 This project generates pictures of trees using Generative Adversarial
@@ -29,3 +29,20 @@ Image output is at `/data/images/VIS_GAN/`.
 
 CIFAR100 dataset must be obtained from CIFAR and is not distributed with this repo.
 
+# Progression
+
+At epoch 0, the Generator is merely generating random noise:
+![Epoch 0](https://github.com/jackthias/this-tree-does-not-exist/blob/master/examples/_epoch_0_batch_0.png)
+
+Very quickly (epoch 3), the adjust to the general structure:
+![Epoch 3](https://github.com/jackthias/this-tree-does-not-exist/blob/master/examples/_epoch_3_batch_0.png)
+
+Overtime (epoch 100) colors become less noisy:
+![Epoch 100](https://github.com/jackthias/this-tree-does-not-exist/blob/master/examples/_epoch_100_batch_0.png)
+
+Eventually (epoch 500), we start to see some variety come out of the generator.
+![Epoch 500](https://github.com/jackthias/this-tree-does-not-exist/blob/master/examples/_epoch_500_batch_0.png)
+
+# Conclusions
+
+I am impressed by how quickly the generator is able to form the general structure of the tree. Over more epochs (around 10,000), though, the results start to regress and overfit to the classifiers model of a tree. Resulting in images that are less tree-like than even earlier epochs. I suspect that this is because of the limited dataset used.
